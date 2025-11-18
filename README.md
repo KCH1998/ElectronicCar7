@@ -130,3 +130,9 @@ HTML · CSS · JavaScript · Thymeleaf
 외부 API
 
 카카오맵 API · 포트원 결제 API
+
+EDR
+<img width="1586" height="1489" alt="image" src="https://github.com/user-attachments/assets/398c8548-dac2-4855-8395-2c0945335577" />
+
+
+
