@@ -1,33 +1,132 @@
+🚀 주요 기능 정리
+1. 사용자 인증
 
-전기차 충전소를 찾고 예약할 수 있는 웹 애플리케이션입니다.
+회원가입: 아이디·비밀번호·닉네임으로 가입 (가입 시 웰컴 쿠폰 자동 지급)
 
-사용자 인증
-POST /users/register - 회원가입
-POST /users/login - 로그인
-POST /users/logout - 로그아웃
-GET /users/check-session - 세션 확인
-POST /users/update - 사용자 정보 수정
-충전소
-GET /api/ev/all - 전체 충전소 목록
-GET /api/ev/hourly-usage/{stationId} - 시간별 사용량
-GET /api/ev/clusters - 클러스터 정보
-예약
-POST /api/reservations/create - 예약 생성
-GET /api/reservations/my - 내 예약 목록
-DELETE /api/reservations/{id} - 예약 취소
-결제
-GET /payments/iamport-key - 포트원 키 조회
-POST /payments/verify - 결제 검증
-쿠폰
-GET /coupons/{username} - 쿠폰 목록
-POST /coupons/exchange/{username} - 쿠폰 교환
-즐겨찾기
-POST /favorites/add - 즐겨찾기 추가
-GET /favorites/user/{username} - 즐겨찾기 목록
-DELETE /favorites/{id} - 즐겨찾기 삭제
-관리자
-GET /admin/dashboard - 관리자 대시보드
-GET /admin/users - 회원 목록
-PUT /admin/users/{id} - 회원 정보 수정
-DELETE /admin/users/{id} - 회원 삭제
-GET /admin/reservations - 예약 내역
+로그인: 일반 로그인 및 카카오 로그인 제공
+
+세션 관리로 로그인 상태 유지
+
+닉네임 변경 등 사용자 정보 수정 기능 제공
+
+2. 충전소 지도 서비스
+
+카카오맵 기반 전국 전기차 충전소 표시
+
+충전소 실시간 상태 제공
+
+🟢 충전 가능
+
+🔴 충전 중
+
+🟠 점검 중
+
+충전소명 · 지역명 검색
+
+다양한 필터 제공
+
+사용 가능 충전소
+
+예약 가능 충전소
+
+충전 타입(급속/완속)
+
+충전소 클릭 시 상세 정보 확인
+
+충전기 개수 및 상태
+
+시간대별 사용량
+
+주소/위치 정보 표시
+
+3. 충전소 예약
+
+날짜/시간 선택 후 예약 생성
+
+내 예약 목록 조회 가능
+
+예약 취소 기능 제공
+
+예약 상태(결제 완료/미결제) 표시
+
+4. 결제 시스템
+
+신용카드(포트원), 쿠폰 결제 지원
+
+서버에서 결제 정보 검증
+
+결제 완료 시 예약 확정 + 일반 쿠폰 자동 지급
+
+5. 쿠폰 시스템
+
+쿠폰 종류
+
+웰컴 쿠폰 (가입 시 지급)
+
+일반 쿠폰 (결제 시 지급)
+
+무료 쿠폰 (일반 쿠폰 5장 교환)
+
+예약 시 쿠폰 적용 가능
+
+일반 쿠폰 5장 → 무료 쿠폰 1장 교환 기능
+
+6. 즐겨찾기
+
+즐겨찾기 추가/삭제
+
+즐겨찾기 목록 조회
+
+7. 관리자 페이지
+
+대시보드
+
+회원 수, 예약 수, 결제 통계
+
+회원 관리
+
+목록 조회, 검색, 정보 수정, 삭제
+
+예약 관리
+
+전체 예약 내역 확인
+
+특정 회원의 예약 기록 조회
+
+🧭 작동 방식
+사용자 흐름
+
+회원가입 또는 로그인 → 웰컴 쿠폰 지급
+
+지도에서 충전소 탐색 (검색/필터)
+
+충전소 상세 정보 확인
+
+예약 진행
+
+결제 (카드/쿠폰)
+
+예약 완료 → 일반 쿠폰 자동 지급
+
+관리자 흐름
+
+관리자 로그인 (admin/1234)
+
+대시보드 통계 확인
+
+회원 관리 수행
+
+예약 내역 확인 및 사용자별 조회
+
+🔧 기술 스택
+Backend
+
+Spring Boot · Java 21 · MySQL
+
+Frontend
+
+HTML · CSS · JavaScript · Thymeleaf
+
+외부 API
+
+카카오맵 API · 포트원 결제 API
