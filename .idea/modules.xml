@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ElectronicCar.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ElectronicCar.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ElectronicCar.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ElectronicCar.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ElectronicCar2.iml" filepath="$PROJECT_DIR$/.idea/ElectronicCar2.iml" />
+    </modules>
+  </component>
+</project>
